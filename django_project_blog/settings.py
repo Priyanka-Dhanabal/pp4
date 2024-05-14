@@ -40,6 +40,10 @@ INSTALLED_APPS = [
     'blog',
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-priyankadhanabal-pp4-2kgl93970zq.ws-eu111.gitpod.io',
+]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
