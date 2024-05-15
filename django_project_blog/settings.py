@@ -31,7 +31,6 @@ ALLOWED_HOSTS = ['8000-priyankadhanabal-pp4-2kgl93970zq.ws-eu111.gitpod.io']
 # Application definition
 
 INSTALLED_APPS = [
-
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'user_account',
+    'crispy_forms',
+    'crispy_bootstrap5',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
@@ -130,3 +131,6 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
