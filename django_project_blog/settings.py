@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['8000-priyankadhanabal-pp4-2kgl93970zq.ws-eu111.gitpod.io']
 # Application definition
 
 INSTALLED_APPS = [
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'user_account',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
