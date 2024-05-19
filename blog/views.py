@@ -3,7 +3,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views.generic import (ListView, 
                                 DetailView, 
                                 CreateView,
-                                UpdateView)
+                                UpdateView,
+                                DeleteView)
 from .models import blog_post
 
 # Create your views here.
@@ -48,6 +49,17 @@ class post_update_view(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         if self.request.user == post.author:
             return True
         return False
+
+class post_delete_view(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    model = blog_post
+    success_url = '/'
+
+    def test_func(self):
+        post = self.get_object()
+        if self.request.user == post.author:
+            return True
+        return False
+
 
 
 def about(request):

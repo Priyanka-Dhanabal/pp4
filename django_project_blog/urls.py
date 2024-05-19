@@ -24,7 +24,8 @@ from django.conf.urls.static import static
 from blog.views import (post_list_view, 
                     post_detail_view,
                     post_create_view,
-                    post_update_view)
+                    post_update_view,
+                    post_delete_view)
 
 urlpatterns = [
     path('', post_list_view.as_view(), name='blog-home'),
@@ -37,6 +38,7 @@ urlpatterns = [
     path('post/<int:pk>/', post_detail_view.as_view(), name='post-detail'),
     path('post/new/', post_create_view.as_view(), name='post-create'),
     path('post/<int:pk>/update/', post_update_view.as_view(), name='post-update'),
+    path('post/<int:pk>/delete/', post_delete_view.as_view(), name='post-delete'),
 ]
 
 
