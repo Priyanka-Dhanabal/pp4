@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView
+from django.views.generic import (ListView, DetailView, 
+                                    CreateView)
 from .models import blog_post
 
 # Create your views here.
@@ -19,6 +20,15 @@ class post_list_view(ListView):
 
 class post_detail_view(DetailView):
     model = blog_post
+
+
+class post_create_view(CreateView):
+    model = blog_post
+    fields = ['title', 'content']
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
 
 
 def about(request):

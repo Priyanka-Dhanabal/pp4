@@ -21,7 +21,8 @@ from user_account import views as user_views
 from django.contrib.auth import views as auth_views
 from django.conf import settings
 from django.conf.urls.static import static
-from blog.views import post_list_view, post_detail_view
+from blog.views import (post_list_view, post_detail_view,
+                        post_create_view)
 
 urlpatterns = [
     path('', post_list_view.as_view(), name='blog-home'),
@@ -32,6 +33,7 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(template_name='user_account/logout.html'), name='logout'),
     path('profile/', user_views.profile, name='profile'),
     path('post/<int:pk>/', post_detail_view.as_view(), name='post-detail'),
+    path('post/new/', post_create_view.as_view(), name='post-create'),
 ]
 
 

@@ -45,7 +45,7 @@ INSTALLED_APPS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-priyankadhanabal-pp4-2kgl93970zq.ws-eu111.gitpod.io',
+    'https://8000-priyankadhanabal-pp4-2kgl93970zq.ws-eu114.gitpod.io',
 ]
 
 MIDDLEWARE = [
