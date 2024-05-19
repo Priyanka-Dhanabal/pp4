@@ -21,8 +21,10 @@ from user_account import views as user_views
 from django.contrib.auth import views as auth_views
 from django.conf import settings
 from django.conf.urls.static import static
-from blog.views import (post_list_view, post_detail_view,
-                        post_create_view)
+from blog.views import (post_list_view, 
+                    post_detail_view,
+                    post_create_view,
+                    post_update_view)
 
 urlpatterns = [
     path('', post_list_view.as_view(), name='blog-home'),
@@ -34,6 +36,7 @@ urlpatterns = [
     path('profile/', user_views.profile, name='profile'),
     path('post/<int:pk>/', post_detail_view.as_view(), name='post-detail'),
     path('post/new/', post_create_view.as_view(), name='post-create'),
+    path('post/<int:pk>/update/', post_update_view.as_view(), name='post-update'),
 ]
 
 

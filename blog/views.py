@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.views.generic import (ListView, DetailView, 
-                                    CreateView)
+from django.views.generic import (ListView, 
+                                DetailView, 
+                                CreateView,
+                                UpdateView)
 from .models import blog_post
 
 # Create your views here.
@@ -11,6 +13,7 @@ def home(request):
         'posts': blog_post.objects.all()
     }
     return render(request, 'blog/home.html', context)
+
 
 class post_list_view(ListView):
     model = blog_post
@@ -24,6 +27,15 @@ class post_detail_view(DetailView):
 
 
 class post_create_view(LoginRequiredMixin, CreateView):
+    model = blog_post
+    fields = ['title', 'content']
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+
+
+class post_update_view(LoginRequiredMixin, UpdateView):
     model = blog_post
     fields = ['title', 'content']
 
