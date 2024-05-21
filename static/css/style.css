@@ -1,0 +1,12 @@
+body{
+    background: linear-gradient(#c7e7f3, #f5e3e3, #d2d2ff);
+    height: 100vh;
+}
+
+.nav-link{
+    color: #000;
+}
+
+.nav-link:hover{
+    color: #555555;
+}
