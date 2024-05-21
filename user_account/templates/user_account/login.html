@@ -2,7 +2,7 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-    <div class="content-section">
+    <div class="content-section login-content">
         <form action="" method="post">
             {% csrf_token %}
             <fieldset class="form-group">
@@ -11,12 +11,10 @@
 
             </fieldset>
             <div class="form-group">
-                <button class="btn btn-outline-info" type="submit">Login</button>
+                <button class="btn btn-outline-secondary d-grid gap-2 col-6 mx-auto my-3" type="submit">Login</button>
+                <small class="text-muted sign-up-text">Do you need An Account? <a href="{% url 'register' %}">Sign Up Now</a></small>
             </div>
         </form>
-        <div class="border-top pt-3">
-            <small class="text-muted">Do you need An Account? <a href="{% url 'register' %}">Sign Up Now</a></small>
-        </div>
     </div>
 
 {% endblock content%}
