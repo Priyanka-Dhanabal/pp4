@@ -1,5 +1,5 @@
 body{
-    background: hsl(53, 100%, 98%);
+    background: #fffff6;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -39,7 +39,7 @@ nav{
     background: linear-gradient(#c7e7f3, #f5e3e3, #d5d5fa);
 }
 
-.register-content{
+.register-content, .profile-content, .new-post-content, .post-detail-content{
     margin: 5em auto;
     width: 80%;
     max-width: 700px;
