@@ -10,17 +10,16 @@
         </div>
         <div class="col-8">
             <div class="media-body mt-3">
-                <div class="article-metadata">
-                    {% if object.author == user %}
-                        <div>
-                            <a class="btn btn-secondary btn-sm" href="{% url 'post-update' object.id %}">Update</a>
-                            <a class="btn btn-danger btn-sm" href="{% url 'post-delete' object.id %}">Detele</a>
-                        </div>
-        
-                    {% endif %}
-                </div>
                 <h2 class="article-title header-elements">{{ object.title }}</h2>
                 <p class="article-content">{{ object.content }}</p>
+            </div>
+            <div class="article-metadata">
+                {% if object.author == user %}
+                    <div>
+                        <a class="btn btn-secondary btn-sm" href="{% url 'post-update' object.id %}">Update</a>
+                        <a class="btn btn-danger btn-sm" href="{% url 'post-delete' object.id %}">Detele</a>
+                    </div>
+                {% endif %}
             </div>
         </div>
     </div>
