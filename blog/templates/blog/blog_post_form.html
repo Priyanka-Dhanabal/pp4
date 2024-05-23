@@ -3,6 +3,7 @@
 
 {% block content %}
     <div class="content-section new-post-content">
+        <a class="d-flex justify-content-end p-0 m-0 hyperlinks" href="{% url 'blog-home' %}">X</a>
         <form action="" method="post">
             {% csrf_token %}
             <fieldset class="form-group">
