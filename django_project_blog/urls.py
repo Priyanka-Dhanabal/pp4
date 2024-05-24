@@ -41,6 +41,20 @@ urlpatterns = [
     path('post/new/', post_create_view.as_view(), name='post-create'),
     path('post/<int:pk>/update/', post_update_view.as_view(), name='post-update'),
     path('post/<int:pk>/delete/', post_delete_view.as_view(), name='post-delete'),
+    
+    path('password-reset/',
+         auth_views.PasswordResetView.as_view(
+             template_name='user_account/password_reset.html'
+         ), name='password_reset'),
+    path('password-reset/done/',
+         auth_views.PasswordResetDoneView.as_view(
+             template_name='user_account/password_reset_done.html'
+         ),
+         name='password_reset_done'),
+    path('password-reset-confirm/<uidb64>/<token>/',
+         auth_views.PasswordResetConfirmView.as_view(
+             template_name='user_account/password_reset_confirm.html'
+         ),name='password_reset_confirm'),
 ]
 
 

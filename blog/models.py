@@ -3,6 +3,7 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 from django.urls import reverse
 from cloudinary.models import CloudinaryField
+from django.contrib.auth.decorators import login_required
 
 # Create your models here.
 
@@ -21,3 +22,7 @@ class blog_post(models.Model):
         return reverse('post-detail', kwargs={
             'pk' : self.pk
         })
+
+
+
+
