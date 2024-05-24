@@ -31,7 +31,7 @@ class user_post_list_view(ListView):
     model = blog_post
     template_name = 'blog/user_posts.html'
     context_object_name = 'posts'
-    paginate_by = 2
+    paginate_by = 3
 
     def get_queryset(self):
         user = get_object_or_404(User, username=self.kwargs.get('username'))
@@ -41,6 +41,7 @@ class user_post_list_view(ListView):
 class post_detail_view(DetailView):
     model = blog_post
     context_object_name = 'post'
+    paginate_by = 3
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

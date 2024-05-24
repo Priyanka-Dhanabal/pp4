@@ -41,7 +41,7 @@ nav{
 
 .register-content, .profile-content, .new-post-content,
 .post-detail-content, .user-posts-content,
-.delete-post-content, .logout-content{
+.delete-post-content, .logout-content, .about-page{
     margin: 5em auto;
     width: 80%;
     max-width: 700px;
@@ -85,5 +85,9 @@ img{
 
 footer{
     margin-top: auto;
+}
+
+.bad-script{
+    font-family: bad script, sans-serif;
 }
 
