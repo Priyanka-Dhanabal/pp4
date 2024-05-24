@@ -87,7 +87,27 @@ footer{
     margin-top: auto;
 }
 
-.bad-script{
-    font-family: bad script, sans-serif;
+.star {
+    margin: 0 5px 15px;
+    font-size: 1.8em;
+    color: #929292;
+    cursor: pointer;
+}
+
+.rating{
+    text-align: center;
+}
+
+.star:hover {
+    transform: scale(1.2);
+}
+
+#modal-header {
+    display: block;
+    text-align: center;
+}
+
+.colored {
+    color: gold;
 }
 
