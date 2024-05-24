@@ -41,6 +41,9 @@ urlpatterns = [
     path('post/new/', post_create_view.as_view(), name='post-create'),
     path('post/<int:pk>/update/', post_update_view.as_view(), name='post-update'),
     path('post/<int:pk>/delete/', post_delete_view.as_view(), name='post-delete'),
+    path('bookmark/add/<int:post_id>', user_views.add_bookmark, name='add_bookmark'),
+    path('bookmark/remove/<int:post_id>', user_views.remove_bookmark, name='remove_bookmark'),
+    path('bookmarks/', user_views.bookmarked_posts, name='bookmarked_posts'),
     
     path('password-reset/',
          auth_views.PasswordResetView.as_view(

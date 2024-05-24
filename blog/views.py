@@ -8,6 +8,7 @@ from django.views.generic import (ListView,
                                 UpdateView,
                                 DeleteView)
 from .models import blog_post
+from user_account.models import Bookmark
 
 # Create your views here.
 
@@ -39,6 +40,16 @@ class user_post_list_view(ListView):
 
 class post_detail_view(DetailView):
     model = blog_post
+    context_object_name = 'post'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        post = self.get_object()
+        if self.request.user.is_authenticated:
+            context['is_bookmarked'] = Bookmark.objects.filter(user=self.request.user, post=post).exists()
+        else:
+             False
+        return context
 
 
 class post_create_view(LoginRequiredMixin, CreateView):

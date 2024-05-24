@@ -1,8 +1,12 @@
-from django.shortcuts import render, redirect, HttpResponseRedirect
+from django.shortcuts import (render, redirect, 
+                            HttpResponseRedirect, 
+                            get_object_or_404)
+
 from .forms import user_registration_form, UserUpdateForm, ProfileUpdateForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from blog.models import blog_post
+from .models import Bookmark
 
 # Create your views here.
 def register(request):
@@ -42,3 +46,22 @@ def profile(request):
 
     return render(request, 'user_account/profile.html', context)
 
+
+@login_required
+def add_bookmark(request, post_id):
+    post = get_object_or_404(blog_post, id=post_id)
+    Bookmark.objects.get_or_create(user=request.user, post=post)
+    return redirect('post-detail', pk=post.id)
+
+
+@login_required
+def remove_bookmark(request, post_id):
+    post = get_object_or_404(blog_post, id=post_id)
+    Bookmark.objects.filter(user=request.user, post=post).delete()
+    return redirect('post-detail', pk=post.id)
+
+
+@login_required
+def bookmarked_posts(request):
+    bookmarks = Bookmark.objects.filter(user=request.user).select_related('post')
+    return render(request, 'user_account/bookmarked_posts.html', {'bookmarks': bookmarks})
