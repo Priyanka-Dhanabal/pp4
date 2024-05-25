@@ -21,30 +21,37 @@ from user_account import views as user_views
 from django.contrib.auth import views as auth_views
 from django.conf import settings
 from django.conf.urls.static import static
-from blog.views import (post_list_view, 
-                    post_detail_view,
-                    post_create_view,
-                    post_update_view,
-                    post_delete_view,
-                    user_post_list_view)
+from blog.views import (post_list_view,
+                        post_detail_view,
+                        post_create_view,
+                        post_update_view,
+                        post_delete_view,
+                        user_post_list_view)
 
 urlpatterns = [
     path('', post_list_view.as_view(), name='blog-home'),
-    path('user/<str:username>', user_post_list_view.as_view(), name='user-posts'),
+    path('user/<str:username>', user_post_list_view.as_view(),
+         name='user-posts'),
     path('admin/', admin.site.urls),
     path('about/', home_views.about, name='blog-about'),
     path('register/', user_views.register, name='register'),
-    path('login/', auth_views.LoginView.as_view(template_name='user_account/login.html'), name='login'),
-    path('logout/', auth_views.LogoutView.as_view(template_name='user_account/logout.html'), name='logout'),
+    path('login/', auth_views.LoginView.as_view(
+         template_name='user_account/login.html'), name='login'),
+    path('logout/', auth_views.LogoutView.as_view(
+         template_name='user_account/logout.html'), name='logout'),
     path('profile/', user_views.profile, name='profile'),
-    path('post/<int:pk>/', post_detail_view.as_view(), name='post-detail'),
+    path('post/<int:pk>/', post_detail_view.as_view(),
+         name='post-detail'),
     path('post/new/', post_create_view.as_view(), name='post-create'),
-    path('post/<int:pk>/update/', post_update_view.as_view(), name='post-update'),
-    path('post/<int:pk>/delete/', post_delete_view.as_view(), name='post-delete'),
-    path('bookmark/add/<int:post_id>', user_views.add_bookmark, name='add_bookmark'),
-    path('bookmark/remove/<int:post_id>', user_views.remove_bookmark, name='remove_bookmark'),
+    path('post/<int:pk>/update/', post_update_view.as_view(),
+         name='post-update'),
+    path('post/<int:pk>/delete/', post_delete_view.as_view(),
+         name='post-delete'),
+    path('bookmark/add/<int:post_id>', user_views.add_bookmark,
+         name='add_bookmark'),
+    path('bookmark/remove/<int:post_id>', user_views.remove_bookmark,
+         name='remove_bookmark'),
     path('bookmarks/', user_views.bookmarked_posts, name='bookmarked_posts'),
-    
     path('password-reset/',
          auth_views.PasswordResetView.as_view(
              template_name='user_account/password_reset.html'
@@ -57,9 +64,10 @@ urlpatterns = [
     path('password-reset-confirm/<uidb64>/<token>/',
          auth_views.PasswordResetConfirmView.as_view(
              template_name='user_account/password_reset_confirm.html'
-         ),name='password_reset_confirm'),
+         ), name='password_reset_confirm'),
 ]
 
 
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)

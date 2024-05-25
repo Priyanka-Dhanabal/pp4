@@ -1,11 +1,11 @@
 {% extends "blog/base.html" %}
-
+<!--When user logout, user can log back in-->
 {% block content %}
-    <div class="content-section logout-content">
-        <h2 class="text-center">You have been logged out Successfully.</h2>
-        <div class="border-top pt-3">
-           <a class="hyperlinks text-center" href="{% url 'login' %}">Log In again?</a>
-        </div>
+<div class="content-section logout-content">
+    <h2 class="text-center">You have been logged out Successfully.</h2>
+    <div class="border-top pt-3">
+        <a class="hyperlinks text-center" href="{% url 'login' %}">Log In again?</a>
     </div>
+</div>
 
 {% endblock content%}
