@@ -5,6 +5,7 @@ body{
     flex-direction: column;
 }
 
+/*--------------------------------------------------------------- Nav */
 nav{
     background-color: #fae0ff;
 }
@@ -86,6 +87,8 @@ img{
 footer{
     margin-top: auto;
 }
+
+/*--------------------------------------------------------------- Rate us modal */
 
 .star {
     margin: 0 5px 15px;
