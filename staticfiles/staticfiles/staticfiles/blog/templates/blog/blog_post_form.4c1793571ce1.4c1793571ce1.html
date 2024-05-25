@@ -1,0 +1,20 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="content-section new-post-content">
+        <a class="d-flex justify-content-end p-0 m-0 hyperlinks" href="{% url 'blog-home' %}">X</a>
+        <form action="" method="post">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4 mt-3 text-center header-elements h3">Blog Post</legend>
+                <em class="text-muted d-flex justify-content-center">Ready to post..!</em>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-dark d-grid gap-2 col-6 mx-auto my-3" type="submit">Post Now!</button>
+            </div>
+        </form>
+    </div>
+
+{% endblock content%}

@@ -2,8 +2,24 @@
 {% load static %}
 
 {% block content %}
+<!-- container to display a singlke post in detail -->
 <article class="media content-section post-detail-content">
-    <a class="d-flex justify-content-end p-0 m-0 hyperlinks" href="{% url 'blog-home' %}">X</a>
+    <div class="d-flex justify-content-between">
+        {% if user.is_authenticated %}
+        {% if is_bookmarked %}
+        <form method="post" action="{% url 'remove_bookmark' post.id %}">
+            {% csrf_token %}
+            <button type="submit">Remove Bookmark</button>
+        </form>
+        {% else %}
+        <form method="post" action="{% url 'add_bookmark' post.id %}">
+            {% csrf_token %}
+            <button type="submit">Add Bookmark</button>
+        </form>
+        {% endif %}
+        {% endif %}
+        <a class="p-0 m-0 hyperlinks" href="{% url 'blog-home' %}">X</a>
+    </div>
     <div class="row">
         <div class="col-4">
             <img class="image_resize article-img mt-3" src="{{ object.author.profile.image.url }}"><br>
@@ -15,16 +31,17 @@
                 <h2 class="article-title header-elements">{{ object.title }}</h2>
                 <p class="article-content">{{ object.content }}</p>
             </div>
+            <!-- if the post is logged in User's post, they can update or delete a post-->
             <div class="article-metadata">
                 {% if object.author == user %}
-                    <div>
-                        <a class="btn btn-secondary btn-sm" href="{% url 'post-update' object.id %}">Update</a>
-                        <a class="btn btn-danger btn-sm" href="{% url 'post-delete' object.id %}">Detele</a>
-                    </div>
+                <div>
+                    <a class="btn btn-secondary btn-sm" href="{% url 'post-update' object.id %}">Update</a>
+                    <a class="btn btn-danger btn-sm" href="{% url 'post-delete' object.id %}">Detele</a>
+                </div>
                 {% endif %}
             </div>
         </div>
     </div>
-    
+
 </article>
 {% endblock content%}

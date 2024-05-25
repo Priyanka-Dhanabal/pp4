@@ -1,0 +1,89 @@
+body{
+    background: #fffff6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav{
+    background-color: #fae0ff;
+}
+
+.nav-link{
+    color: #000;
+    font-weight: 400;
+}
+
+.nav-link:hover{
+    color: #555555;
+}
+
+.navbar-brand{
+    font-family: happy monkey, sans-serif;
+    font-weight: 500;
+}
+
+
+
+/*--------------------------------------------------------------- Login Page */
+/*--------------------------------------------------------------- Register Page */
+/*--------------------------------------------------------------- Logout Page */
+
+.login-content{
+    margin: 5em auto;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    padding: 10px 15px;
+    background: linear-gradient(#c7e7f3, #f5e3e3, #d5d5fa);
+}
+
+.register-content, .profile-content, .new-post-content,
+.post-detail-content, .user-posts-content,
+.delete-post-content, .logout-content{
+    margin: 5em auto;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    padding: 10px 15px;
+    background: linear-gradient(#c7e7f3, #f5e3e3, #d5d5fa);
+}
+
+.hyperlinks{
+    color: hsl(240, 100%, 18%);
+    text-decoration: none;
+}
+
+.hyperlinks:hover{
+    color: hsl(240, 100%, 50%);
+}
+
+.header-elements{
+    font-family: happy monkey, sans-serif;
+    font-weight: 400;
+}
+
+.image_resize{
+    width: 150px;
+    height: 150px;
+}
+
+.border-container-style{
+    margin: 1em auto;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    padding: 10px 15px;
+    background: linear-gradient(#c7e7f3, #f5e3e3, #d5d5fa);
+}
+
+img{
+    border-radius: 10px;
+}
+
+footer{
+    margin-top: auto;
+}
+

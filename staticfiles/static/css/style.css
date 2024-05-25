@@ -5,6 +5,7 @@ body{
     flex-direction: column;
 }
 
+/*--------------------------------------------------------------- Nav */
 nav{
     background-color: #fae0ff;
 }
@@ -41,7 +42,7 @@ nav{
 
 .register-content, .profile-content, .new-post-content,
 .post-detail-content, .user-posts-content,
-.delete-post-content, .logout-content{
+.delete-post-content, .logout-content, .about-page{
     margin: 5em auto;
     width: 80%;
     max-width: 700px;
@@ -85,5 +86,31 @@ img{
 
 footer{
     margin-top: auto;
+}
+
+/*--------------------------------------------------------------- Rate us modal */
+
+.star {
+    margin: 0 5px 15px;
+    font-size: 1.8em;
+    color: #929292;
+    cursor: pointer;
+}
+
+.rating{
+    text-align: center;
+}
+
+.star:hover {
+    transform: scale(1.2);
+}
+
+#modal-header {
+    display: block;
+    text-align: center;
+}
+
+.colored {
+    color: gold;
 }
 
