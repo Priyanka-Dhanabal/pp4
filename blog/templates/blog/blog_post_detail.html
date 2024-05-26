@@ -22,7 +22,14 @@
     </div>
     <div class="row">
         <div class="col-4">
-            <img class="image_resize article-img mt-3" src="{{ object.author.profile.image.url }}"><br>
+            <div class="container-img">
+                {% if "placeholder" in post.author.profile.image.url or not post.author.profile.image.url %}
+                <img class="image_resize" src="{% static 'images/default.jpg' %}" alt="placeholder image">
+                {% else %}
+
+                <img class="image_resize" src="{{ post.author.profile.image.url }}" alt="{{ post.title }}">
+                {% endif %}
+            </div>
             <a class="hyperlinks" href="{% url 'user-posts' object.author.username %}">{{ object.author }}</a><br>
             <small class="text-muted">{{ object.date_posted|date:"F d, Y" }}</small>
         </div>

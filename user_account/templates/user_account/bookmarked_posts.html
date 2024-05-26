@@ -8,7 +8,6 @@
 <article class="media content-section user-posts-content">
     <div class="row">
         <div class="col-4">
-            <img class="image_resize article-img" src="{{ bookmark.post.author.profile.image.url }}"><br>
             <a class="mr-2 hyperlinks"
                 href="{% url 'user-posts' bookmark.post.author.username %}">{{ bookmark.post.author }}</a><br>
             <small class="text-muted">{{ bookmark.post.date_posted|date:"F d, Y" }}</small>
@@ -18,7 +17,6 @@
                 <div class="article-metadata">
                     <h2><a class="article-title header-elements hyperlinks"
                             href="{% url 'post-detail' bookmark.post.id %}">{{ bookmark.post.title }}</a></h2>
-                    <p class="article-content">{{ bookmark.post.content }}</p>
                 </div>
             </div>
         </div>

@@ -9,7 +9,14 @@
     <div class="row">
         <div class="col-4">
             <div class="media">
-                <img class="image_resize account-img" src="{{ user.profile.image.url }}">
+                <div class="container-img">
+                    {% if not user.profile.image.url %}
+                    <img class="image_resize" src="{% static 'images/default.jpg' %}" alt="placeholder image">
+                    {% else %}
+
+                    <img class="image_resize" src="{{ user.profile.image.url }}" alt="{{ post.title }}">
+                    {% endif %}
+                </div>
             </div>
         </div>
         <div class="col-8">

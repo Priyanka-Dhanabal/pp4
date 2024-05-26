@@ -9,7 +9,14 @@
     <a class="d-flex justify-content-end p-0 m-0 hyperlinks" href="{% url 'blog-home' %}">X</a>
     <div class="row">
         <div class="col-4">
-            <img class="image_resize article-img" src="{{ post.author.profile.image.url }}"><br>
+            <div class="container-img">
+                {% if "placeholder" in post.author.profile.image.url or not post.author.profile.image.url %}
+                <img class="image_resize" src="{% static 'images/default.jpg' %}" alt="placeholder image">
+                {% else %}
+
+                <img class="image_resize" src="{{ post.author.profile.image.url }}" alt="{{ post.title }}">
+                {% endif %}
+            </div>
             <a class="mr-2 hyperlinks" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a><br>
             <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
         </div>

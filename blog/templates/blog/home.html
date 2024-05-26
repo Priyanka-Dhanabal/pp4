@@ -10,10 +10,10 @@
     <div class="col-4">
       <div class="container-img">
         {% if "placeholder" in post.author.profile.image.url or not post.author.profile.image.url %}
-        <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="placeholder image">
+        <img class="image_resize" src="{% static 'images/default.jpg' %}" alt="placeholder image">
         {% else %}
 
-        <img class="card-img-top" src="{{ post.author.profile.image.url }}" alt="{{ post.title }}">
+        <img class="image_resize" src="{{ post.author.profile.image.url }}" alt="{{ post.title }}">
         {% endif %}
       </div>
 
