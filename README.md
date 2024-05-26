@@ -4,10 +4,11 @@
 For sure, this blog would keep evolving in future, by providing features that will evolve into a dynamic platform that will serve as a hub for innovation and community engagement.   
 At 'Blog Happened', we believe that words to inform, inspire, and transform lives plays a very crucial role. Users are allowed to discuss the latest trends in technology, explore the nuances of art and culture, or just offer some tips for personal development.
 
-![Responsive Image]()
+![Responsive Image](assests/readme/images/amiresponsive.png)
+
 ### - By Priyanka Dhanabal
-The live version of the project can be viewed [here]()
-You can check out my Repository [here]()
+The live version of the project can be viewed [here](https://pp4-blog-happened-b5fc9506d1fa.herokuapp.com/)
+You can check out my Repository [here](https://github.com/Priyanka-Dhanabal/pp4)
 
 ## Table of contents
  1. [ UX ](#ux)
@@ -67,24 +68,27 @@ Typography:
 ### Wireframes
 At the start, I decided on the theme and color palette for the website as the website was in the development phase. Due to time constraints, I am unable to implement every feature and look as I thought at the start.
 
-![Website view]()
+![Website view](assests/readme/images/Website-view.png)
 
-![view when logged in]()
+![view when logged in](assests/readme/images/Website-view(loggedin).png)
 
-![profile]()
+![profile](assests/readme/images/Profile-view.png)
 
-![post detail]()
+![post detail](assests/readme/images/post-detail-view.png)
 
-![list of posts]()
+![list of posts](assests/readme/images/list-of-posts.png)
 
-![bookmark]()
+![bookmark](assests/readme/images/bookmark.png)
 
 [Back to top](#table-of-contents)
 
 ## Database Structure
 The entity relationship diagram for this project can be seen below.
 
-![database erd]()
+![database erd](assests/readme/images/ERD.png)
+
+
+[Back to top](#table-of-contents)
 
 
 ## Features
@@ -93,68 +97,68 @@ The entity relationship diagram for this project can be seen below.
 - On the left side of the page, a link for home, About, Login and Register for users who has not logged in.
 - For users who have logged in, they will see Home, Bookmark, Profile, New-Post, Logout.
 
-![Header-Nav]()
+![Header-Nav](assests/readme/images/header-nav.png)
 
-![Nav-loggedin]()
+![Nav-loggedin](assests/readme/images/nav-loggedin.png)
 
 **Footer**
 - Consists of copyright, navigate to GitHub repo and rate us.
 - Rate us button: Users can provide a star rating for the website.
 
-![Footer]()
+![Footer](assests/readme/images/Footer.png)
 
-![Star rating]()
+![Star rating](assests/readme/images/star-rating.png)
 
  **Main content**
 - Users can log in
 
-![login]()
+![login](assests/readme/images/login.png)
 
 - New users can register to access the features.
 
-![Register]()
+![Register](assests/readme/images/register.png)
 
 - Users who are new or those who have to yet registered will be able to view the list of posts. 
 - The posts will be displayed such that the latest post is on top.
 
-![list of posts]()
+![list of posts](assests/readme/images/post-lists.png)
 
 - When clicking on the Author's name, they can view a list of posts posted by an Author.
 
-![author post list]()
+![author post list](assests/readme/images/Author-post-lists.png)
 
 - When clicked on a post title, users can view the detailed version of the post.
 
-![post detail]()
+![post detail](assests/readme/images/post-detail.png)
 	
 - Users who are logged in, they will be able to bookmark or remove the bookmark from a post.
 - Users can update or delete the post if the author of the post and current user are the same.
 
-![bookmark/update/delete]()
+![bookmark/update/delete](assests/readme/images/bookmark-update.png)
 
 - If the user wants to delete a post, they can confirm to avoid post deletion by mistake.
 
-![post delete]()
+![post delete](assests/readme/images/delete.png)
 
 - Pagination, 3 blogs will be displayed per page.
 
-![Pagination]()
+![Pagination](assests/readme/images/pagination.png)
 
 - Bookmarked- Users who are logged in, can view the list of posts that have been bookmarked.
 
-![bookmarked list]()
+![bookmarked list](assests/readme/images/bookmarked.png)
 
 - Profile - Users can view or update their profile, username, email, and profile photo.
 
-![profile]()
+![profile](assests/readme/images/profile.png)
 
 - New post - Users who are logged in can update or post a new post.
 
-![new post]()
+![new post](assests/readme/images/new-post.png)
 
 - The user can logout, and will be prompted to log back in.
 
-![logout]()
+![logout](assests/readme/images/logout.png)
 
 
 ## Future Features
@@ -166,6 +170,7 @@ Due to high time constraints, I wasn't able to add these features, but I would l
  - Make the website more user-friendly
  - Search field, Site users can easily find a post they are interested in.
 
+[Back to top](#table-of-contents)
 
 ## Technologies Used
 
@@ -206,6 +211,9 @@ The packages installed for this file can be found in requirements.txt, and can b
 - urllib3==1.26.18
 - whitenoise==5.3.0
 
+[Back to top](#table-of-contents)
+
+
 ## Testing
 ### Manual testing
 The following tests were carried out manually.
@@ -239,15 +247,28 @@ The following tests were carried out manually.
 - Used [CI Python Linter](https://pep8ci.herokuapp.com/) to validate if all the Python files follow the PEP8 style guide.
 **No errors were found.**
 
-![PEP8]()
+![PEP8](assests/readme/images/pep1.png)
+
+![PEP8](assests/readme/images/pep2.png)
+
+![PEP8](assests/readme/images/pep3.png)
 
 - Lighthouse
 
-![lighthouse]()
+![lighthouse](assests/readme/images/lighthouse.png)
 
 - W3C HTML
 
-![HTML]()
+![HTML](assests/readme/images/HTML.png)
+
+- Responsiveness
+
+![Desktop](assests/readme/images/Desktop view.png)
+
+![Mobile](assests/readme/images/mobile view.png)
+
+[Back to top](#table-of-contents)
+
 
 ## Bugs
 ### Solved bugs:
@@ -259,6 +280,9 @@ The following tests were carried out manually.
 ### Unfixed Bugs:
 
 1. When a user tries to close the post container, the user is taken back to the home page instead of the previous page.
+
+[Back to top](#table-of-contents)
+
 
 ## Deployment
 
@@ -279,6 +303,9 @@ This project is deployed on Heroku.
 12. Scroll to the bottom of the deploy page and select the preferred deployment type
 13. Click either Enable Automatic Deploys for automatic deployment when you push updates to Github or Manual deploy to deploy the current state of the branch. - I used Manual deploy for this project.
 
+[Back to top](#table-of-contents)
+
+
 ## Credits
 ### Content and resources
 1. Code Institute
@@ -287,6 +314,7 @@ This project is deployed on Heroku.
 3. Lucidchart - used to create a flow chart to illustrate my project idea.
 5. StackEdit - To edit my readMe file content.
 6. geeks for geeks - To understand few challenges that i faced during the development of this project.
+6. smartdraw - used to draw the ERD diagram
 
 ### Acknowledgements
 
@@ -304,3 +332,4 @@ Linus J_5P
 - Very helpful and motivating during the phase when I was about to give up on this project, helped me to look through the code, and helped me figure out the issues.
 
 *****************
+[Back to top](#table-of-contents)
