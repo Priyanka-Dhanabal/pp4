@@ -67,8 +67,8 @@ nav{
 }
 
 .image_resize{
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    height: 80%;
 }
 
 .border-container-style{
@@ -81,7 +81,7 @@ nav{
 }
 
 img{
-    border-radius: 50%;
+    border-radius: 10px;
 }
 
 footer{
@@ -113,4 +113,3 @@ footer{
 .colored {
     color: gold;
 }
-

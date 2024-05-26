@@ -21,11 +21,10 @@
     <div class="col-8">
       <div class="media-body">
         <div class="article-metadata d-flex justify-content-end">
-          <span><a class="p-2 hyperlinks" href="{% url 'user-posts' post.author.username %}"
-              aria-labelledby="display username">{{ post.author }}</a>
+          <span><a class="p-2 hyperlinks" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
             <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small></span>
         </div>
-        <h2 class="d-flex justify-content-start"><a class="article-title hyperlinks header-elements h3"
+        <h2 class="d-flex justify-content-center"><a class="article-title hyperlinks header-elements h3"
             href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
         <p class="article-content my-5">{{ post.content }}</p>
       </div>

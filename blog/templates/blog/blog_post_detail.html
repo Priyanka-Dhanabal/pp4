@@ -4,7 +4,7 @@
 {% block content %}
 <!-- container to display a singlke post in detail -->
 <article class="media content-section post-detail-content">
-    <div class="d-flex justify-content-between">
+    <div class="d-flex justify-content-between mb-3">
         {% if user.is_authenticated %}
         {% if is_bookmarked %}
         <form method="post" action="{% url 'remove_bookmark' post.id %}">

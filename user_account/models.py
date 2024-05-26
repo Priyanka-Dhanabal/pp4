@@ -7,6 +7,7 @@ from django.utils.translation import gettext_lazy as _
 
 # Create your models here.
 
+
 # Model for user proflies
 class profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
