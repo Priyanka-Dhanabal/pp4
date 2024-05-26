@@ -66,17 +66,29 @@ Typography:
 - Imported Happy Monkey from Google fonts user as the primary font, and Sans-Serif used as the secondary font.
  
 ### Wireframes
-At the start, I decided on the theme and color palette for the website as the website was in the development phase. Due to time constraints, I am unable to implement every feature and look as I thought at the start.
+At the start, I could not decided on the theme and color palette for the website. but later on everything came together.
+
+- Website view
 
 ![Website view](assests/readme/images/Website-view.png)
 
+- Website view when the User is logged in
+
 ![view when logged in](assests/readme/images/Website-view(loggedin).png)
+
+- Profile
 
 ![profile](assests/readme/images/Profile-view.png)
 
+- Post detail
+
 ![post detail](assests/readme/images/post-detail-view.png)
 
+- List of posts
+
 ![list of posts](assests/readme/images/list-of-posts.png)
+
+- Bookmarked posts
 
 ![bookmark](assests/readme/images/bookmark.png)
 
@@ -263,9 +275,9 @@ The following tests were carried out manually.
 
 - Responsiveness
 
-![Desktop](assests/readme/images/Desktop view.png)
+![Desktop](assests/readme/images/Desktop-view.png)
 
-![Mobile](assests/readme/images/mobile view.png)
+![Mobile](assests/readme/images/mobile-view.png)
 
 [Back to top](#table-of-contents)
 
